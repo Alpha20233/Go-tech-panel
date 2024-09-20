@@ -152,6 +152,7 @@ export class IndexDBService {
   }
 
   async updateProfile(id: number, detail: signup): Promise<any> {
+    debugger
     const res = await firstValueFrom(this.dbService.update('users', { id, ...detail }));
     if (res) {
       localStorage.setItem('userDetail', JSON.stringify(res));

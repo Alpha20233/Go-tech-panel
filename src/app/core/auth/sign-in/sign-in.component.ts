@@ -72,6 +72,8 @@ export class SignInComponent implements OnInit {
     if (res) {
       if(isAdmin[0]){
         localStorage.setItem('userDetail', JSON.stringify(res));
+      }else{
+        localStorage.setItem('userDetail', JSON.stringify(res));
       }
       this.form_submit.set(false);
       this.router.navigate(['/dashboard']);
